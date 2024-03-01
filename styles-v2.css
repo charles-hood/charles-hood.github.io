@@ -5,19 +5,15 @@ body {
     font-family: sans-serif;
 }
 
-/* Social icons styling using div containers */
-.social-icons {
-    display: flex;
-    flex-wrap: wrap;
+/* Styling the social icons in a table */
+.social-icons table {
+    border-collapse: collapse; /* Remove table borders */
+    margin: 0 auto; /* Center the table horizontally */
 }
 
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 1;
-    text-align: center;
+.social-icons td {
+    padding: 1rem; /* Add some padding inside table cells */
+    text-align: center; /* Center text content */
 }
 
 .social-icons a {
@@ -59,15 +55,3 @@ footer {
     padding-top: 1rem;
 }
 
-.footer-link {
-    color: #ffffff;
-    text-decoration: underline;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-.footer-link:hover {
-    color: #FC93AD;
-    background-color: rgba(255, 255, 255, 0.2);
-}
