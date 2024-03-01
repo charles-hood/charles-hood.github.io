@@ -5,19 +5,6 @@ body {
  font-family: sans-serif;
 }
 
-/* Centering the content container */
-.content-container {
- display: flex;
- flex-direction: column;
- align-items: center;
- margin: 0 auto;
- max-width: 800px;
- background-image: url("circuit-board.png"); /* Add background image */
- background-size: cover; /* Resize image to cover the container */
- background-repeat: no-repeat; /* Prevent image repetition */
- background-position: center; /* Center image horizontally and vertically */
-}
-
 /* Styling the social icons navigation */
 .social-icons {
  display: grid;
