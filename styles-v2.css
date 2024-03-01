@@ -7,10 +7,10 @@ body {
 
 /* Styling the social icons navigation */
 .social-icons {
- display: grid;
- grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
- gap: 10px; /* Spacing between icons */
- margin-top: 20px; /* Add some margin for better spacing */
+  display: flex; /* Use flexbox for even distribution */
+  flex-wrap: wrap; /* Allow wrapping to multiple lines if needed */
+  gap: 10px; /* Spacing between icons */
+  margin-top: 20px; /* Add some margin for better spacing */
 }
 
 .social-icons a {
