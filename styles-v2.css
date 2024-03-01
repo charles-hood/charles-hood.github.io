@@ -1,0 +1,79 @@
+/* General styles */
+body {
+ margin: 0;
+ padding: 0;
+ font-family: sans-serif;
+}
+
+/* Centering the content container */
+.content-container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin: 0 auto;
+ max-width: 800px;
+ background-image: url("circuit-board.png"); /* Add background image */
+ background-size: cover; /* Resize image to cover the container */
+ background-repeat: no-repeat; /* Prevent image repetition */
+ background-position: center; /* Center image horizontally and vertically */
+}
+
+/* Styling the social icons navigation */
+.social-icons {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+ gap: 10px; /* Spacing between icons */
+ margin-top: 20px; /* Add some margin for better spacing */
+}
+
+.social-icons a {
+ text-decoration: none; /* Remove underline from links */
+ color: inherit; /* Inherit text color from parent */
+ font-size: 20px; /* Set icon size */
+ text-align: center; /* Center text content */
+}
+
+.social-icons i {
+ transition: transform 0.2s ease-in-out; /* Add hover effect */
+}
+
+.social-icons a:hover i {
+ transform: scale(1.1); /* Increase size slightly on hover */
+}
+
+.bio-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto;
+  max-width: 200px;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+footer {
+  text-align: center;
+  color: #cccccc;
+  padding-top: 1rem;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.footer-link:hover {
+  color: #FC93AD;
+  background-color: rgba(255, 255, 255, 0.2);
+}
