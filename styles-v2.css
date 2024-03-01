@@ -18,6 +18,9 @@ body {
  color: inherit; /* Inherit text color from parent */
  font-size: 20px; /* Set icon size */
  text-align: center; /* Center text content */
+ width: 40px; /* Adjust this value based on your desired size */
+}
+
 }
 
 .social-icons i {
