@@ -12,14 +12,14 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      color: #ddd; /* Dark mode text color */
-      background-color: #111; /* Dark mode background color */
+      color: #111; /* Dark text color for light mode */
+      background-color: #eee; /* Light mode background color */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     h1, h2, h3 {
       margin: 10px 0;
-      color: #ddd; /* Dark mode text color */
+      color: #111; /* Dark text color for light mode */
     }
 
     img {
@@ -43,11 +43,11 @@
       flex: 1 1 300px;
       padding: 20px;
       border-radius: 5px;
-      background-color: #222; /* Dark mode background color */
+      background-color: #fff; /* Light mode background color */
     }
 
     .hero {
-      background-color: #333; /* Dark mode background color */
+      background-color: #ddd; /* Light mode background color for hero section */
       padding: 30px;
       text-align: center;
     }
@@ -58,18 +58,18 @@
 
     .section h3 {
       margin-bottom: 10px;
-      color: #ddd; /* Dark mode text color */
+      color: #111; /* Dark text color for light mode */
     }
 
     .section p {
       line-height: 1.5;
-      color: #bbb; /* Dark mode text color */
+      color: #333; /* Dark text color for light mode */
     }
 
     .contact {
       text-align: center;
       margin-top: 40px;
-      color: #bbb; /* Dark mode text color */
+      color: #333; /* Dark text color for light mode */
     }
 
     .social-links {
@@ -79,32 +79,32 @@
     }
 
     .social-links a {
-      color: #ddd; /* Dark mode text color */
+      color: #111; /* Dark text color for light mode */
     }
 
     /* Download section styles */
     .download {
       text-align: center;
       margin-top: 40px;
-      color: #bbb; /* Dark mode text color */
+      color: #333; /* Dark text color for light mode */
     }
 
     /* Light mode styles */
     body.light-mode {
-      background-color: #fff; /* Light mode background color */
-      color: #333; /* Light mode text color */
+      background-color: #111; /* Dark mode background color */
+      color: #ddd; /* Light text color for dark mode */
     }
 
     .section.light-mode {
-      background-color: #eee; /* Light mode background color */
+      background-color: #222; /* Dark mode background color */
     }
 
     .hero.light-mode {
-      background-color: #ddd; /* Light mode background color */
+      background-color: #333; /* Dark mode background color for hero section */
     }
 
     .social-links.light-mode a {
-      color: #333; /* Light mode text color */
+      color: #ddd; /* Light text color for dark mode */
     }
 
     /* Dark mode toggle button styles */
@@ -116,27 +116,15 @@
       position: fixed;
       top: 20px;
       left: 20px;
-      color: #ddd; /* Dark mode text color */
+      color: #ddd; /* Light text color for dark mode */
       z-index: 999; /* Ensure it's on top of other elements */
     }
   </style>
 </head>
 <body class="dark-mode">
 
-  <!-- Dark mode toggle button with SVG icons -->
-  <button id="darkModeToggle" class="toggle-btn">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </button>
+  <!-- Dark mode toggle button with ☀️ Unicode character -->
+  <button id="darkModeToggle" class="toggle-btn">☀️</button>
 
   <script>
     // JavaScript to toggle dark mode
