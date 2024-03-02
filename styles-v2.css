@@ -55,3 +55,13 @@ footer {
     padding-top: 1rem;
 }
 
+/* Copyright link styling */
+footer a {
+    text-decoration: underline;
+    color: #001f3f; /* Dark blue or navy blue color */
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+    color: #003366; /* Darker blue color on hover */
+}
