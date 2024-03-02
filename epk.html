@@ -12,14 +12,14 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      color: #333; /* Light mode text color */
-      background-color: #fff; /* Light mode background color */
+      color: #ddd; /* Dark mode text color */
+      background-color: #111; /* Dark mode background color */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     h1, h2, h3 {
       margin: 10px 0;
-      color: #333; /* Light mode text color */
+      color: #ddd; /* Dark mode text color */
     }
 
     img {
@@ -43,11 +43,11 @@
       flex: 1 1 300px;
       padding: 20px;
       border-radius: 5px;
-      background-color: #eee; /* Light mode background color */
+      background-color: #222; /* Dark mode background color */
     }
 
     .hero {
-      background-color: #ddd; /* Light mode background color */
+      background-color: #333; /* Dark mode background color */
       padding: 30px;
       text-align: center;
     }
@@ -58,18 +58,18 @@
 
     .section h3 {
       margin-bottom: 10px;
-      color: #333; /* Light mode text color */
+      color: #ddd; /* Dark mode text color */
     }
 
     .section p {
       line-height: 1.5;
-      color: #666; /* Light mode text color */
+      color: #bbb; /* Dark mode text color */
     }
 
     .contact {
       text-align: center;
       margin-top: 40px;
-      color: #666; /* Light mode text color */
+      color: #bbb; /* Dark mode text color */
     }
 
     .social-links {
@@ -79,32 +79,32 @@
     }
 
     .social-links a {
-      color: #333; /* Light mode text color */
+      color: #ddd; /* Dark mode text color */
     }
 
     /* Download section styles */
     .download {
       text-align: center;
       margin-top: 40px;
-      color: #666; /* Light mode text color */
+      color: #bbb; /* Dark mode text color */
     }
 
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #111; /* Dark mode background color */
-      color: #ddd; /* Dark mode text color */
+    /* Light mode styles */
+    body.light-mode {
+      background-color: #fff; /* Light mode background color */
+      color: #333; /* Light mode text color */
     }
 
-    .section.dark-mode {
-      background-color: #222; /* Dark mode background color */
+    .section.light-mode {
+      background-color: #eee; /* Light mode background color */
     }
 
-    .hero.dark-mode {
-      background-color: #333; /* Dark mode background color */
+    .hero.light-mode {
+      background-color: #ddd; /* Light mode background color */
     }
 
-    .social-links.dark-mode a {
-      color: #ddd; /* Dark mode text color */
+    .social-links.light-mode a {
+      color: #333; /* Light mode text color */
     }
 
     /* Dark mode toggle button styles */
@@ -112,15 +112,16 @@
       background: none;
       border: none;
       cursor: pointer;
-      font-size: 20px;
-      position: absolute;
+      font-size: 30px;
+      position: fixed;
       top: 20px;
-      right: 20px;
-      color: #333; /* Light mode text color */
+      left: 20px;
+      color: #ddd; /* Dark mode text color */
+      z-index: 999; /* Ensure it's on top of other elements */
     }
   </style>
 </head>
-<body>
+<body class="dark-mode">
 
   <!-- Dark mode toggle button -->
   <button id="darkModeToggle" class="toggle-btn">
@@ -135,6 +136,7 @@
 
     darkModeToggle.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
     });
   </script>
 
