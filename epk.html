@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="[Brief description of the artist/band]">
   <link rel="icon" href="[Favicon URL]" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-/8eC+BV44Uc16jFb6AELZ+fl/8y5nRPt1dKeF70CZl8VPS4DBX+5dPfQYlnK18WZ" crossorigin="anonymous">
   <title>[Artist/Band Name] EPK</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      color: #fff;
-      background-color: #111;
+      color: #333; /* Light mode text color */
+      background-color: #fff; /* Light mode background color */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     h1, h2, h3 {
       margin: 10px 0;
-      color: #fff;
+      color: #333; /* Light mode text color */
     }
 
     img {
@@ -42,11 +43,11 @@
       flex: 1 1 300px;
       padding: 20px;
       border-radius: 5px;
-      background-color: #222;
+      background-color: #eee; /* Light mode background color */
     }
 
     .hero {
-      background-color: #333;
+      background-color: #ddd; /* Light mode background color */
       padding: 30px;
       text-align: center;
     }
@@ -57,18 +58,18 @@
 
     .section h3 {
       margin-bottom: 10px;
-      color: #fff;
+      color: #333; /* Light mode text color */
     }
 
     .section p {
       line-height: 1.5;
-      color: #ddd;
+      color: #666; /* Light mode text color */
     }
 
     .contact {
       text-align: center;
       margin-top: 40px;
-      color: #ddd;
+      color: #666; /* Light mode text color */
     }
 
     .social-links {
@@ -78,27 +79,53 @@
     }
 
     .social-links a {
-      color: #fff;
+      color: #333; /* Light mode text color */
     }
 
     /* Download section styles */
     .download {
       text-align: center;
       margin-top: 40px;
-      color: #ddd;
+      color: #666; /* Light mode text color */
     }
 
     /* Dark mode styles */
     body.dark-mode {
-      background-color: #333;
-      color: #ddd;
+      background-color: #111; /* Dark mode background color */
+      color: #ddd; /* Dark mode text color */
+    }
+
+    .section.dark-mode {
+      background-color: #222; /* Dark mode background color */
+    }
+
+    .hero.dark-mode {
+      background-color: #333; /* Dark mode background color */
+    }
+
+    .social-links.dark-mode a {
+      color: #ddd; /* Dark mode text color */
+    }
+
+    /* Dark mode toggle button styles */
+    .toggle-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
   </style>
 </head>
 <body>
 
   <!-- Dark mode toggle button -->
-  <button id="darkModeToggle">Toggle Dark Mode</button>
+  <button id="darkModeToggle" class="toggle-btn">
+    <i class="far fa-sun"></i> <!-- Light mode icon -->
+    <i class="far fa-moon"></i> <!-- Dark mode icon -->
+  </button>
 
   <script>
     // JavaScript to toggle dark mode
