@@ -69,7 +69,7 @@
     .contact {
       text-align: center;
       margin-top: 40px;
-      color: #333; /* Dark text color for light mode */
+      color: #ddd; /* Light text color for dark mode */
     }
 
     .social-links {
@@ -86,7 +86,7 @@
     .download {
       text-align: center;
       margin-top: 40px;
-      color: #333; /* Dark text color for light mode */
+      color: #ddd; /* Light text color for dark mode */
     }
 
     /* Light mode styles */
@@ -115,7 +115,7 @@
       font-size: 30px;
       position: fixed;
       top: 20px;
-      left: 20px;
+      right: 20px; /* Move the toggle to the upper right */
       color: #ddd; /* Light text color for dark mode */
       z-index: 999; /* Ensure it's on top of other elements */
     }
@@ -123,8 +123,8 @@
 </head>
 <body class="dark-mode">
 
-  <!-- Dark mode toggle button with ☀️ Unicode character -->
-  <button id="darkModeToggle" class="toggle-btn">☀️</button>
+  <!-- Dark mode toggle button with ☼ Unicode character -->
+  <button id="darkModeToggle" class="toggle-btn">☼</button>
 
   <script>
     // JavaScript to toggle dark mode
