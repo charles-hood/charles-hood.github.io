@@ -8,13 +8,40 @@
 </head>
 <body class="dark-mode">
 
-<form id="epkForm">
-    <!-- Your EPK form fields here -->
+<div class="container">
+    <form id="epkForm">
+        <label for="artistName">Artist/Band Name:</label>
+        <input type="text" id="artistName" required><br>
 
-    <input type="button" value="Generate EPK and Copy HTML" onclick="generateEPKAndSendEmail()">
-</form>
+        <label for="heroImageUrl">Hero Image URL:</label>
+        <input type="text" id="heroImageUrl" required><br>
 
-<div id="epkContent" class="container"></div>
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" rows="4" required></textarea><br>
+
+        <label for="musicDescription">Music Description:</label>
+        <textarea id="musicDescription" rows="4" required></textarea><br>
+
+        <label for="musicLink1">Music Link 1:</label>
+        <input type="text" id="musicLink1" required><br>
+
+        <label for="musicLink2">Music Link 2:</label>
+        <input type="text" id="musicLink2" required><br>
+
+        <label for="pressQuotes">Press Quotes:</label>
+        <textarea id="pressQuotes" rows="4" required></textarea><br>
+
+        <label for="tourDates">Tour Dates:</label>
+        <textarea id="tourDates" rows="4" required></textarea><br>
+
+        <label for="contactEmail">Contact Email:</label>
+        <input type="email" id="contactEmail" required><br>
+
+        <input type="button" value="Generate EPK and Copy HTML" onclick="generateEPKAndSendEmail()">
+    </form>
+
+    <div id="epkContent" class="container"></div>
+</div>
 
 <button id="darkModeToggle" class="toggle-btn">☼</button>
 
