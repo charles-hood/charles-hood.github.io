@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPK Generator</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+</head>
+<body class="dark-mode">
+
+<div class="container">
+    <div class="section hero">
+        <h1 id="artistName"></h1>
+        <h2>Electronic Press Kit</h2>
+        <img id="heroImage" alt="Hero Image">
+        <p id="bio"></p>
+    </div>
+
+    <div class="section">
+        <h3>Music</h3>
+        <p id="musicDescription"></p>
+        <ul id="musicLinks"></ul>
+    </div>
+
+    <div class="section">
+        <h3>Press</h3>
+        <p id="pressQuotes"></p>
+    </div>
+
+    <div class="section">
+        <h3>Tour</h3>
+        <p id="tourDates"></p>
+        <p id="contactEmail"></p>
+    </div>
+</div>
+
+<div class="contact">
+    <p><strong>Contact:</strong> <span id="contactEmailSpan"></span></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 <span id="artistNameFooter"></span>. All Rights Reserved.</p>
+</footer>
+
+<button id="darkModeToggle" class="toggle-btn">☼</button>
+
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+    });
+
+    // Function to set content dynamically
+    function setEPKContent() {
+        document.getElementById('artistName').textContent = "Your Artist Name";
+        document.getElementById('heroImage').src = "Your Hero Image URL";
+        document.getElementById('bio').textContent = "Your Short Bio";
+        document.getElementById('musicDescription').textContent = "Your Music Description";
+
+        // Add music links dynamically
+        const musicLinks = document.getElementById('musicLinks');
+        musicLinks.innerHTML = "";
+        addMusicLink("Listen to Song/Album Title 1", "Music Link 1");
+        addMusicLink("Listen to Song/Album Title 2", "Music Link 2");
+
+        document.getElementById('pressQuotes').textContent = "Your Press Quotes";
+        document.getElementById('tourDates').textContent = "Your Tour Dates";
+        document.getElementById('contactEmail').textContent = "Contact: Your Contact Email";
+
+        // Update footer
+        document.getElementById('artistNameFooter').textContent = "Your Artist Name";
+        document.getElementById('contactEmailSpan').textContent = "Your Contact Email";
+    }
+
+    // Function to add music links dynamically
+    function addMusicLink(title, link) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = link;
+        a.textContent = title;
+        li.appendChild(a);
+        document.getElementById('musicLinks').appendChild(li);
+    }
+
+    // Call the function to set EPK content on page load
+    setEPKContent();
+</script>
+
+</body>
+</html>
