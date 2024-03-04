@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPK Generator</title>
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+</head>
+<body class="dark-mode">
+
+<form id="epkForm">
+    <!-- Your EPK form fields here -->
+
+    <input type="button" value="Generate EPK and Copy HTML" onclick="generateEPKAndSendEmail()">
+</form>
+
+<div id="epkContent" class="container"></div>
+
+<button id="darkModeToggle" class="toggle-btn">☼</button>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+    });
+
+    function generateEPKAndSendEmail() {
+        // ... (your existing code to generate EPK)
+
+        const epkContent = `
+            <!-- Your generated EPK content here -->
+        `;
+
+        // Display the generated HTML code in a textarea
+        const textarea = document.createElement('textarea');
+        textarea.value = epkContent;
+        textarea.setAttribute('readonly', ''); // Make textarea read-only
+        textarea.style.resize = 'none'; // Disable textarea resizing
+        textarea.style.width = '100%';
+        textarea.style.height = '300px'; // Adjust height as needed
+
+        // Clear existing content in the epkContent div
+        const epkContentDiv = document.getElementById('epkContent');
+        epkContentDiv.innerHTML = '';
+
+        // Append the textarea to the epkContent div
+        epkContentDiv.appendChild(textarea);
+
+        // Optionally, you can copy the generated content to the clipboard
+        textarea.select();
+        document.execCommand('copy');
+
+        // Inform the user that the HTML code has been copied
+        alert('Generated HTML code has been copied to the clipboard');
+    }
+</script>
+
+</body>
+</html>
